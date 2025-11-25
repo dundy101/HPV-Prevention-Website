@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPV Prevention for Korean Communities | 한인을 위한 HPV 예방</title>
+    <meta name="description" content="Comprehensive HPV and vaccination information for Korean and Korean-immigrant families in the United States.">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-teal: #008B8B;
+            --deep-navy: #1E3A5F;
+            --warm-coral: #FF6F61;
+            --soft-cream: #F5F5DC;
+            --light-gray: #E8E8E8;
+            --gold: #FFD700;
+            --forest-green: #228B22;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Open Sans', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: var(--white);
+        }
+
+        .korean {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--deep-navy);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--deep-navy) 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .hero .korean-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background-color: var(--warm-coral);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-teal);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--deep-navy);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-teal);
+            margin: 2.5rem 0 1rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--deep-navy);
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: var(--primary-teal);
+            margin: 1.5rem 0 0.5rem;
+            font-weight: 600;
+        }
+
+        /* Key Messages */
+        .key-messages {
+            background-color: var(--soft-cream);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--primary-teal);
+        }
+
+        .key-messages h3 {
+            margin-top: 0;
+        }
+
+        .key-messages ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .key-messages li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        /* Info Boxes */
+        .info-box {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--warm-coral);
+        }
+
+        .info-box.note {
+            background-color: #E8F4F8;
+            border-left-color: var(--primary-teal);
+        }
+
+        .info-box.important {
+            background-color: #FFF4E6;
+            border-left-color: var(--gold);
+        }
+
+        .info-box.success {
+            background-color: #E8F5E9;
+            border-left-color: var(--forest-green);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-teal);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--deep-navy);
+            font-weight: 600;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background-color: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-teal);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-answer {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Resource Cards */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .resource-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-card h3 {
+            color: var(--primary-teal);
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--deep-navy);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            line-height: 2;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+        }
+
+        /* Page Navigation */
+        .page-nav {
+            background-color: var(--soft-cream);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .page-nav h3 {
+            margin-top: 0;
+            color: var(--deep-navy);
+        }
+
+        .page-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .page-nav a {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .page-nav a:hover {
+            color: var(--warm-coral);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+
+            .hero .korean-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* Hide all pages except home by default */
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        th {
+            background-color: var(--primary-teal);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: var(--soft-cream);
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">HPV Prevention | HPV 예방</a>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('what-is-hpv')">What is HPV?</a></li>
+                <li><a href="#" onclick="showPage('risks')">Risks</a></li>
+                <li><a href="#" onclick="showPage('vaccine')">Vaccine</a></li>
+                <li><a href="#" onclick="showPage('korean')">Korean Info</a></li>
+                <li><a href="#" onclick="showPage('faq')">FAQs</a></li>
+                <li><a href="#" onclick="showPage('resources')">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page-content active">
+        <div class="hero">
+            <h1>Protecting Our Community's Health</h1>
+            <h2>Understanding HPV and Prevention</h2>
+            <p class="korean-subtitle korean">우리 커뮤니티의 건강을 지키기 위해</p>
+            <p>HPV (Human Papillomavirus, <span class="korean">인유두종바이러스</span>) is one of the most common infections in the United States, but it's also one of the most preventable.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary" onclick="showPage('what-is-hpv')">Learn About HPV</a>
+                <a href="#" class="btn btn-secondary" onclick="showPage('vaccine')">Vaccine Info</a>
+                <a href="#" class="btn btn-outline" onclick="showPage('faq')">한국어 자료</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="key-messages">
+                <h3>Key Messages</h3>
+                <ul>
+                    <li><strong>HPV affects nearly everyone</strong> at some point in their lives</li>
+                    <li><strong>The HPV vaccine prevents up to 90%</strong> of HPV-related cancers</li>
+                    <li><strong>Vaccination is safe and effective</strong> for ages 9-26</li>
+                    <li><strong>Early vaccination</strong> provides the best protection</li>
+                </ul>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">80%</span>
+                    <span class="stat-label">of people get HPV in their lifetime</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">90%</span>
+                    <span class="stat-label">of HPV cancers preventable</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">13M</span>
+                    <span class="stat-label">new infections yearly in U.S.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHAT IS HPV PAGE -->
+    <div id="what-is-hpv" class="page-content">
+        <div class="container">
+            <h1>What is HPV?</h1>
+            <p class="korean" style="font-size: 1.3rem; color: var(--primary-teal);">인유두종바이러스 이해하기</p>
+
+            <h2>Understanding HPV</h2>
+            <p>HPV stands for <strong>Human Papillomavirus</strong> (<span class="korean">인유두종바이러스</span>). There are over 200 types of HPV.</p>
+
+            <div class="key-messages">
+                <h3>Key Facts</h3>
+                <ul>
+                    <li>Most common sexually transmitted infection in the U.S.</li>
+                    <li>About 80% of people will get HPV at some point</li>
+                    <li>Most people never know they have it</li>
+                    <li>Body's immune system usually clears it within 2 years</li>
+                </ul>
+            </div>
+
+            <h2>Types of HPV</h2>
+            <div class="two-column">
+                <div class="info-box">
+                    <h3>Low-Risk HPV</h3>
+                    <p class="korean">저위험 HPV</p>
+                    <ul>
+                        <li>Cause genital warts</li>
+                        <li>Not dangerous but uncomfortable</li>
+                    </ul>
+                </div>
+
+                <div class="info-box important">
+                    <h3>High-Risk HPV</h3>
+                    <p class="korean">고위험 HPV</p>
+                    <ul>
+                        <li>Can cause cancer</li>
+                        <li>Types 16 & 18 cause 70% of cervical cancers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RISKS PAGE -->
+    <div id="risks" class="page-content">
+        <div class="container">
+            <h1>HPV Risks & Prevention</h1>
+            
+            <h2>Cancers Caused by HPV</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h3>Cervical Cancer</h3>
+                    <p class="korean">자궁경부암</p>
+                    <p>11,500 cases yearly in U.S.</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Throat Cancer</h3>
+                    <p class="korean">구인두암</p>
+                    <p>13,000 cases yearly</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Anal Cancer</h3>
+                    <p class="korean">항문암</p>
+                    <p>8,300 cases yearly</p>
+                </div>
+            </div>
+
+            <h2>Prevention Strategies</h2>
+            <div class="info-box success">
+                <h3>1. HPV Vaccination (Most Effective)</h3>
+                <p>Prevents up to 90% of HPV-related cancers</p>
+            </div>
+            <div class="info-box">
+                <h3>2. Regular Screening</h3>
+                <p>Pap tests for early detection</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- VACCINE PAGE -->
+    <div id="vaccine" class="page-content">
+        <div class="container">
+            <h1>HPV Vaccination Guide</h1>
+            <p class="korean" style="font-size: 1.3rem; color: var(--primary-teal);">HPV 백신 완벽 가이드</p>
+
+            <h2>Who Should Get Vaccinated?</h2>
+            <div class="two-column">
+                <div class="info-box success">
+                    <h3>Ages 11-12</h3>
+                    <p class="korean">권장 연령</p>
+                    <p>Best time for vaccination - 2 doses needed</p>
+                </div>
+                <div class="info-box">
+                    <h3>Ages 13-26</h3>
+                    <p>Catch-up vaccination - 3 doses</p>
+                </div>
+            </div>
+
+            <h2>Is It Safe?</h2>
+            <div class="key-messages">
+                <ul>
+                    <li>Given to over 135 million people worldwide</li>
+                    <li>Continuously monitored by CDC and FDA</li>
+                    <li>Side effects are typically mild</li>
+                </ul>
+            </div>
+
+            <div class="info-box important">
+                <h3>Does It Cause Infertility?</h3>
+                <p><strong>NO.</strong> This is a myth. Multiple studies confirm the vaccine does NOT affect fertility.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- KOREAN COMMUNITIES PAGE -->
+    <div id="korean" class="page-content">
+        <div class="container">
+            <h1>For Korean/Korean-Immigrant Communities</h1>
+            <p class="korean" style="font-size: 1.3rem; color: var(--primary-teal);">문화적으로 관련된 정보</p>
+
+            <h2>Understanding Cultural Barriers</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h3>Cultural Stigma</h3>
+                    <p class="korean">문화적 낙인</p>
+                    <p>HPV vaccination is about <strong>cancer prevention</strong>, not sexual behavior.</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Language Barriers</h3>
+                    <p class="korean">언어 장벽</p>
+                    <p>Request Korean-speaking providers or interpreters.</p>
+                </div>
+            </div>
+
+            <div class="info-box success">
+                <h3 class="korean">한인 가족들에게</h3>
+                <p class="korean" style="font-size: 1.1rem; font-weight: 600;">건강한 미래를 위해, 우리 아이들을 보호합시다.</p>
+                <p><em>For a healthy future, let's protect our children.</em></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ PAGE -->
+    <div id="faq" class="page-content">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+
+            <h2>General Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">Q: What is HPV?</div>
+                <div class="faq-answer">A: HPV (Human Papillomavirus) is a very common virus that can cause genital warts and several types of cancer.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Is the HPV vaccine safe?</div>
+                <div class="faq-answer">A: Yes, the HPV vaccine is very safe. It has been studied extensively for over 15 years and given to over 135 million people worldwide.</div>
+            </div>
+
+            <h2 class="korean" style="margin-top: 3rem;">한국어 자주 묻는 질문</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question korean">Q: HPV가 무엇인가요?</div>
+                <div class="faq-answer">A: HPV(인유두종바이러스)는 매우 흔한 바이러스로 성기 사마귀와 여러 종류의 암을 유발할 수 있습니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question korean">Q: HPV 백신은 안전한가요?</div>
+                <div class="faq-answer">A: 네, HPV 백신은 매우 안전합니다. 15년 이상 광범위하게 연구되었으며 전 세계적으로 1억 3,500만 명 이상에게 투여되었습니다.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESOURCES PAGE -->
+    <div id="resources" class="page-content">
+        <div class="container">
+            <h1>Resources & Clinics</h1>
+
+            <h2>Find Healthcare</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h3>Community Health Centers</h3>
+                    <p>findahealthcenter.hrsa.gov</p>
+                    <p>1-877-464-4772</p>
+                </div>
+                <div class="resource-card">
+                    <h3>CDC Information</h3>
+                    <p>www.cdc.gov/hpv</p>
+                    <p>1-800-CDC-INFO</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Cancer Society</h3>
+                    <p>www.cancer.org</p>
+                    <p>1-800-227-2345 (24/7)</p>
+                </div>
+            </div>
+
+            <h2>Korean Community Resources</h2>
+            <div class="info-box">
+                <ul>
+                    <li>Korean Community Service Centers</li>
+                    <li>Korean CDC (<span class="korean">질병관리청</span>): kdca.go.kr</li>
+                    <li>Korean American health organizations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('what-is-hpv')">What is HPV?</a></li>
+                    <li><a href="#" onclick="showPage('vaccine')">Vaccination</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Important Numbers</h3>
+                <ul>
+                    <li>CDC: 1-800-CDC-INFO</li>
+                    <li>Cancer Society: 1-800-227-2345</li>
+                    <li>Emergency: 911</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HPV Prevention for Korean Communities</p>
+            <p>Educational information based on CDC and medical guidelines</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+                window.scrollTo(0, 0);
+            }
+        }
+    </script>
+</body>
+</html>
